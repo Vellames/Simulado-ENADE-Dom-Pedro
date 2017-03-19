@@ -1,0 +1,37 @@
+{
+
+  "hi" : "Hi",
+  "attention": "Attention",
+  "filter" : "Filter",
+  "yes" : "Yes",
+  "not" : "Not",
+  "save" : "Save",
+
+  "actions" : "Actions",
+  "name" : "Name",
+  "email": "Email",
+  "active" : "Active",
+  "admin" : "Admin",
+  "created_by": "Created By",
+  "edited_by": "Editado Por",
+
+  "hint_see": "See",
+  "hint_edit": "Edit",
+  "hint_delete": "Delete",
+  "hint_activate": "Activate User",
+  "hint_adm_on" : "Become Administrador",
+  "hint_adm_off": "Remove Administrador",
+
+  "header_menu_classes": "Classes",
+  "header_menu_questions": "Questions",
+  "header_menu_users": "Users",
+
+  "alert-account-inactive-msg" : "Your account are inactive. This means that you can not create questions until some admin activate your account.",
+
+  "alert-verify-email-1" : "The email",
+  "alert-verify-email-2" : "are not verified, for you security, active the email registered",
+
+  "classes_view_new_class": "New Class",
+
+  "footer_copyright": "Developed by Cassiano Vellames | All rights reserved"
+}
