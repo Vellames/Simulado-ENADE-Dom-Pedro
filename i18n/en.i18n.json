@@ -19,8 +19,9 @@
   "hint_edit": "Edit",
   "hint_delete": "Delete",
   "hint_activate": "Activate User",
-  "hint_adm_on" : "Become Administrador",
-  "hint_adm_off": "Remove Administrador",
+  "hint_inactivate" : "Inactivate User",
+  "hint_adm_on" : "Become Administrator",
+  "hint_adm_off": "Remove Administrator",
 
   "header_menu_courses": "Courses",
   "header_menu_questions": "Questions",

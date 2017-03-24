@@ -19,6 +19,7 @@
   "hint_edit": "Editar",
   "hint_delete": "Apagar",
   "hint_activate": "Ativar Usuário",
+  "hint_inactivate" : "Desativar Usuário",
   "hint_adm_on" : "Tornar Administrador",
   "hint_adm_off": "Remover Administrador",
 

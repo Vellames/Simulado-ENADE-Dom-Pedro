@@ -1,3 +1,10 @@
 Router.route("/users", function(){
-   this.render("users_view");
+    this.subscribe("users.select").wait();
+    this.render("users_view", {
+        data : () => {
+            return {
+                "users" : Meteor.users.select({}, {})
+            }
+        }
+    });
 });
