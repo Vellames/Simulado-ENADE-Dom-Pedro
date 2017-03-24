@@ -1,29 +1,17 @@
 import {Courses} from "../../models/courses"
 
 Router.route("/courses", function(){
-
-    /*if(Meteor.user() == null){
-        this.redirect("/");
-        return false;
-    }*/
-
     this.subscribe("courses.select");
     this.render("courses_view", {
         data: function () {
             return {
-                courses : Courses.select()
+                courses : Courses.select({}, {name: 1})
             }
         }
-    }, {name : "courses_list"});
+    });
 });
 
 Router.route("/courses/new", function(){
-
-    /*if(Meteor.user() == null){
-     this.redirect("/");
-     return false;
-     }*/
-
     Session.set("formMode", "new");
     this.render("courses_form", {
         data: function () {
@@ -31,7 +19,7 @@ Router.route("/courses/new", function(){
                 newMode: true
             };
         }
-    }, {name : "courses_new"});
+    });
 });
 
 Router.route("/courses/:_id/view", function(){

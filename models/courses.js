@@ -17,6 +17,12 @@ Courses.add = (name, callback) => {
     });
 };
 
+/**
+ * Edit a course
+ * @param _id Id of course
+ * @param name New name of course
+ * @param callback Callback of function
+ */
 Courses.edit = (_id, name, callback) => {
     Courses.update(
         {_id : _id},
@@ -33,32 +39,44 @@ Courses.edit = (_id, name, callback) => {
 };
 
 /**
- * Select courses using the filter sent by the client
- * @returns {Cursor}
+ * Delete one course
+ * @param _id Id of course
+ * @param callback Callback of function
  */
-Courses.select = (name, createdBy) => {
-    var filter = {};
-    if(name){
-        filter["name"] = new RegExp(name, 'i');
-    }
-
-    if(createdBy){
-        filter["createdBy.profile.name"] = new RegExp(createdBy, 'i');
-    }
-    return Courses.find(filter);
+Courses.delete = (_id, callback) => {
+    Courses.remove({_id : _id}, (err,res) => callback(err, res));
 };
 
 /**
- *
- * @param id
- * @returns {Cursor}
+ * @param filter JSON with filters
+ * @param orderBy JSON with orderBy params
+ * @returns {Cursor} Returns a cursor with courses
+ */
+Courses.select = (filter, orderBy) => {
+    if(filter == undefined){
+        filter = {};
+    }
+
+    if(orderBy == undefined){
+        orderBy = {};
+    }
+
+    return Courses.find(filter, {sort: orderBy});
+};
+
+/**
+ * @param id Id of course
+ * @returns {Cursor} Return one course based in passed id
  */
 Courses.loadOne = (id) => {
     return Courses.find({_id: id});
 };
 
 
-// Permissions
+/*
+    Permissions:
+        Only the admin can add, edit and remove a course
+ */
 Courses.allow({
     insert: (userId, doc) => {
         var user = Meteor.user();

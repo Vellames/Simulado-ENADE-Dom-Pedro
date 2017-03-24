@@ -33,6 +33,16 @@
 
   "courses_view_new_courses": "Novo Curso",
 
+  "register_insert_success" : "Registro inserido com sucesso",
+  "register_insert_fail" : "Falha ao inserir registro",
+
+  "register_update_success" : "Registro atualizado com sucesso",
+  "register_update_fail" : "Falha ao atualizar registro",
+
+  "register_delete_success" : "Registro deletado com sucesso",
+  "register_delete_fail" : "Falha ao deletar registro",
+  "register_delete_confirm" : "Deseja realmente deletar esse registro?",
+
   "footer_copyright": "Desenvolvido por Cassiano Vellames | Todos os direitos reservados"
 }
 

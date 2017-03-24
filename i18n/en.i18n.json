@@ -33,5 +33,16 @@
 
   "courses_view_new_courses": "New Class",
 
+  "register_insert_success" : "Record inserted with success",
+  "register_insert_fail" : "Failed to insert record",
+
+  "register_update_success" : "Record updated with success",
+  "register_update_fail" : "Failed to update record",
+
+  "register_delete_success" : "Record deleted with success",
+  "register_delete_fail" : "Failed to delete record",
+  "register_delete_confirm" : "Do you really want to delete this record?",
+
+
   "footer_copyright": "Developed by Cassiano Vellames | All rights reserved"
 }

@@ -8,11 +8,11 @@
                 <legend>{{_ "filter"}} ({{_ "header_menu_courses"}})</legend>
                 <div class="col-xs-12 col-sm-6">
                     <label for="filter_name">{{_ "name"}}</label>
-                    <input type="text" class="form-control" id="filter_name" name="filter_name">
+                    <input type="text" class="form-control" name="name">
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <label for="filter_created_by">{{_ "created_by"}}</label>
-                    <input type="text" class="form-control" id="filter_created_by" name="filter_created_by">
+                    <input type="text" class="form-control" name="createdBy.profile.name">
                 </div>
                 <div class="button-div">
                     <button class="btn btn-primary">
@@ -37,9 +37,9 @@
                 <thead>
                 <tr>
                     <th>{{_ "actions"}}</th>
-                    <th>{{_ "name"}}</th>
-                    <th>{{_ "created_by"}}</th>
-                    <th>{{_ "edited_by"}}</th>
+                    <th data-field="name" data-order-mode="1"><a>{{_ "name"}}</a></th>
+                    <th data-field="createdBy.profile.name" data-order-mode="-1"><a>{{_ "created_by"}}</a></th>
+                    <th data-field="editedBy.profile.name" data-order-mode="-1"><a>{{_ "edited_by"}}</a></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -53,7 +53,7 @@
                                     <a class="btn btn-warning" title="{{_ "hint_edit"}}" href="/courses/{{_id}}/edit">
                                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                     </a>
-                                    <button class="btn btn-danger" title="{{_ "hint_delete"}}" href="/courses/{{_id}}/delete">
+                                    <button class="btn btn-danger btn-delete" title="{{_ "hint_delete"}}" data-id="{{_id}}">
                                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                     </button>
                                 </div>

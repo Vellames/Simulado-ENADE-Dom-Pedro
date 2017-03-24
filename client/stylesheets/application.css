@@ -1,6 +1,5 @@
-.btn{
-    margin-bottom: 10px;
-}
+a{ cursor: pointer }
+.btn{ margin-bottom: 10px; }
 
 .button-div{
     float: right;
