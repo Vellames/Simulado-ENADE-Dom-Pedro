@@ -1,3 +1,59 @@
 <template name="users_form">
-    users form
+    <form>
+        <fieldset>
+            <legend>Dados Básicos</legend>
+
+            <div class="col-xs-12">
+                <label for="name">{{_ "name"}}</label>
+                <input type="text" class="form-control" id="name" disabled>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <label for="name">{{_ "admin"}}</label>
+                <input type="text" class="form-control" id="admin" disabled>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <label for="name">{{_ "active"}}</label>
+                <input type="text" class="form-control" id="active" disabled>
+            </div>
+
+        </fieldset>
+
+        <div class="clearfix"></div>
+        <fieldset class="margin-top-10">
+            <legend>Emails</legend>
+
+            <div class="form-group">
+                <div class="col-xs-10">
+                    <label>{{_ "email"}}</label>
+                    <input type="text" class="form-control" disabled>
+                </div>
+                <div class="col-xs-2">
+                    <label>{{_ "active"}}</label>
+                    <input type="text" class="form-control" disabled>
+                </div>
+            </div>
+
+        </fieldset>
+
+        <div class="clearfix"></div>
+        <fieldset class="margin-top-10">
+            <legend>Cursos</legend>
+            <button class="btn btn-success">
+                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                {{_ "save"}}
+            </button>
+        </fieldset>
+
+
+        <div class="clearfix"></div>
+        <hr>
+        <div class="col-xs-12 margin-top-10">
+            <button class="btn btn-success">
+                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                {{_ "save"}}
+            </button>
+        </div>
+    </form>
 </template>

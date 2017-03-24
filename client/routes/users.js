@@ -8,3 +8,14 @@ Router.route("/users", function(){
         }
     });
 });
+
+Router.route("/users/:_id/edit", function(){
+    this.subscribe("users.select").wait();
+    this.render("users_form", {
+       data: () => {
+           return {
+
+           }
+       }
+    });
+});
