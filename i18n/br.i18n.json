@@ -36,6 +36,9 @@
   "header_menu_questions": "Perguntas",
   "header_menu_users": "Usuários",
 
+  "index_have_not_login?1" : "Ainda não tem login?",
+  "index_have_not_login?2" : "Clique no botão 'Entrar/Cadastrar' no canto superior direito e aguarde aprovação de um administrador",
+
   "alert-account-inactive-msg" : "Sua conta esta inativa. Isso significa que você não poderá criar perguntas até algum administrador ativar sua conta.",
   "alert-verify-email-1" : "O endereço de email",
   "alert-verify-email-2" : "ainda não foi verificado, para sua segurança ative o email cadastrado",
