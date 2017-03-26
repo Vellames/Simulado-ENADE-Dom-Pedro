@@ -7,12 +7,18 @@
   "not" : "Não",
   "save" : "Salvar",
   "add" : "Adicionar",
+  "(select)": "(Selecione)",
+  "verified" : "Verificado",
+  "remove" : "Remover",
 
   "actions" : "Ações",
   "name" : "Nome",
   "email": "Email",
   "active" : "Ativo",
   "admin" : "Admin",
+  "question" : "Pergunta",
+  "answers" : "Respostas",
+  "correct" : "Correta",
   "created_by": "Criado Por",
   "edited_by": "Editado Por",
 
@@ -24,6 +30,7 @@
   "hint_adm_on" : "Tornar Administrador",
   "hint_adm_off": "Remover Administrador",
 
+  "course": "Curso",
 
   "header_menu_courses": "Cursos",
   "header_menu_questions": "Perguntas",
@@ -34,6 +41,27 @@
   "alert-verify-email-2" : "ainda não foi verificado, para sua segurança ative o email cadastrado",
 
   "courses_view_new_courses": "Novo Curso",
+  "questions_view_new_question": "Nova Pergunta",
+  "questions_form_new_answer": "Nova Resposta",
+
+  "questions_basic_information" : "Informações Básicas",
+
+  "users_basic_data" : "Dados Básicos",
+  "users_emails" : "Emails",
+
+  "user_activate_success" : "Usuário ativado com sucesso",
+  "user_activate_fail" : "Falha ao ativar usuário",
+
+  "user_disable_success" : "Usuário desativado com sucesso",
+  "user_disable_fail" : "Falha ao desativar usuário",
+
+  "user_course_already_pushed" : "O curso escolhido já foi atribuido ao usuário",
+
+  "admin_enable_success" : "Permissão de administrador concedida com sucesso",
+  "admin_enable_fail" : "Falha ao conceder permissão de administrador para o usuário",
+
+  "admin_disable_success" : "Permissão de administrador revogada com sucesso",
+  "admin_disable_fail" : "Falha ao revogar permissãp de administrador para o usuário",
 
   "register_insert_success" : "Registro inserido com sucesso",
   "register_insert_fail" : "Falha ao inserir registro",
