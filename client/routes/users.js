@@ -1,6 +1,11 @@
 import {Courses} from "../../models/courses";
 
 Router.route("/users", function(){
+
+   /* if(!Meteor.user().profile.isAdmin){
+        Route.go("/");
+    }*/
+
     this.subscribe("users.select").wait();
     this.render("users_view", {
         data : () => {

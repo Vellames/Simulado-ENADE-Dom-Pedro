@@ -82,15 +82,16 @@ Questions.delete = (_id, callback) =>{
 Questions.allow({
     insert: (userId, doc) => {
         var user = Meteor.user();
-        return user.profile.isAdmin;
+        return user.profile.isActive;
     },
     update: (userId, doc, fields, modifier) => {
         var user = Meteor.user();
-        return user.profile.isAdmin;
+        console.log(doc);
+        return (user.profile.isActive && doc.createdBy._id == userId) || user.profile.isAdmin;
     },
     remove: (userId, doc) => {
         var user = Meteor.user();
-        return user.profile.isAdmin;
+        return (user.profile.isActive && doc.createdBy._id == userId) || user.profile.isAdmin;
     }
 });
 

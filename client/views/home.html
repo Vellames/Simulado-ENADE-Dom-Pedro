@@ -1,23 +1,6 @@
 <template name="home">
-    {{#if currentUser}}
-       {{#with currentUser.profile}}
-            {{#unless isActive}}
-                <div class="alert alert-danger" id="alert-account-inactive">
-                    <strong>{{_ "attention"}}!</strong> {{_ "alert-account-inactive-msg"}}
-                </div>
-            {{/unless}}
-       {{/with}}
-
-        {{#each currentUser.emails}}
-            {{#unless verified}}
-                <div class="alert alert-warning" id="alert-verify-email">
-                    <strong>{{_ "attention"}}!</strong> {{_ "alert-verify-email-1"}} <strong>{{address}}</strong> {{_ "alert-verify-email-2"}}
-                </div>
-            {{/unless}}
-        {{/each}}
-
-    {{else}}
+    {{#unless currentUser}}
         <h1 class="text-center">{{_ "index_have_not_login?1"}}</h1>
         <p class="text-center"><strong>{{_ "index_have_not_login?2"}}</strong></p>
-    {{/if}}
+    {{/unless}}
 </template>

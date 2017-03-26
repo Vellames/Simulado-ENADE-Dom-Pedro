@@ -3,6 +3,7 @@ Accounts.onCreateUser((options, user) => {
 
     options.profile['isAdmin'] = false;
     options.profile['isActive'] = false;
+    options.profile["courses"] = [];
     user.profile = options.profile;
 
     return user;

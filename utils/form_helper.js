@@ -51,6 +51,9 @@ FormHelper.setOrderBy = (event) => {
  * @returns {int} Returns the position of passed ID in array
  */
 FormHelper.getIdIndexInCollection = (collection, id) => {
+    if(collection === undefined || collection.length == 0){
+        return -1;
+    }
     return collection.findIndex(function(item, i){
         return item._id === id
     });

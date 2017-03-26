@@ -12,7 +12,7 @@ Router.route("/questions", function(){
             }
         }
     });
-});
+}, {name : "questions_list"});
 
 Router.route("/questions/new", function(){
     this.subscribe("courses.select");
@@ -25,7 +25,7 @@ Router.route("/questions/new", function(){
             }
         }
     });
-});
+}, {name: "question_new"});
 
 Router.route("/question/:_id/edit", function(){
 
@@ -41,7 +41,7 @@ Router.route("/question/:_id/edit", function(){
             }
         }
     });
-});
+}, {name : "question_edit"});
 
 Router.route("/question/:_id", function(){
     this.subscribe("questions.select");
@@ -56,4 +56,4 @@ Router.route("/question/:_id", function(){
             }
         }
     });
-});
+}, {name : "question_view"});

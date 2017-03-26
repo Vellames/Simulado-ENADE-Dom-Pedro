@@ -1,5 +1,7 @@
-Meteor.publish("users.select", () => {
-    return Meteor.users.find();
-    //return Meteor.users.find({"emails.address": {$not: "admin@admin.com"}});
-    //({"emails.address": {"$not" : { "$eq" : "admin@admin.com"}}});
+Meteor.publish("users.select", function() {
+    if(this.userId){
+        const userCursor = Meteor.users.find({"_id" : this.userId});
+        const user = userCursor.fetch()[0];
+        return (user.profile.isAdmin && user.profile.isActive ? Meteor.users.find() : userCursor);
+    }
 });
