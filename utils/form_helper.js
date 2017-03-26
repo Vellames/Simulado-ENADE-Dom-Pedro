@@ -45,4 +45,15 @@ FormHelper.setOrderBy = (event) => {
     Session.set("orderByForm", orderBy);
 };
 
+/**
+ * @param collection Collection to search
+ * @param id Id searched
+ * @returns {int} Returns the position of passed ID in array
+ */
+FormHelper.getIdIndexInCollection = (collection, id) => {
+    return collection.findIndex(function(item, i){
+        return item._id === id
+    });
+};
+
 export {FormHelper}

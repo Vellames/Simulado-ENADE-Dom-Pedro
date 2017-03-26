@@ -1,3 +1,5 @@
+import {FormHelper} from "../../../utils/form_helper"
+
 Template.users_form.events({
     /**
      * Add a new course choose in DOM
@@ -15,13 +17,13 @@ Template.users_form.events({
         $("select#courses").val("");
 
         // Verify if value already exists in userCourses
-        if(getIdIndexInCourses(userCourses, courseId) > -1){
+        if(FormHelper.getIdIndexInCollection(userCourses, courseId) > -1){
             alert(TAPi18n.__("user_course_already_pushed"));
             return false;
         }
 
         // Push the course selected in reactive var
-        userCourses.push(courses[getIdIndexInCourses(courses, courseId)]);
+        userCourses.push(courses[FormHelper.getIdIndexInCollection(courses, courseId)]);
         instance.userCourses.set(userCourses);
 
         event.preventDefault();
@@ -39,7 +41,7 @@ Template.users_form.events({
         const inputCourseId = $(event.currentTarget).parent().parent().find("input").attr("data-id");
 
         // Get index of id selected in reactive courses array
-        userCourses.splice(getIdIndexInCourses(userCourses, inputCourseId), 1);
+        userCourses.splice(FormHelper.getIdIndexInCollection(userCourses, inputCourseId), 1);
         instance.userCourses.set(userCourses);
 
         event.preventDefault();
@@ -65,14 +67,3 @@ Template.users_form.events({
     }
 
 });
-
-/**
- * @param coursesArray Courses Array
- * @param id Id searched
- * @returns {int} Returns the position of passed ID in an "Courses" array
- */
-var getIdIndexInCourses = (coursesArray, id) => {
-    return coursesArray.findIndex(function(item, i){
-        return item._id === id
-    });
-};

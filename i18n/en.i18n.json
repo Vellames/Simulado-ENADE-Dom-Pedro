@@ -46,6 +46,9 @@
   "questions_form_new_answer": "New Answer",
 
   "questions_basic_information" : "Basic Information",
+  "questions_alert_minimal_answer" : "You need to add at least two answers to each question",
+  "questions_alert_only_one_correct_answer" : "You can only add one correct answer per question",
+  "questions_alert_zero_correct_answer" : "No response was flagged as correct, please check the true answer",
 
   "users_basic_data" : "Basic Information",
   "users_emails" : "Emails",

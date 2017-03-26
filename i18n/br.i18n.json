@@ -45,6 +45,9 @@
   "questions_form_new_answer": "Nova Resposta",
 
   "questions_basic_information" : "Informações Básicas",
+  "questions_alert_minimal_answer" : "Você precisa adicionar pelo menos duas respostas para cada pergunta",
+  "questions_alert_only_one_correct_answer" : "Só é possível adicionar uma resposta correta por pergunta",
+  "questions_alert_zero_correct_answer" : "Nenhuma resposta foi sinalizada como correta, por favor marque a resposta verdadeira",
 
   "users_basic_data" : "Dados Básicos",
   "users_emails" : "Emails",
