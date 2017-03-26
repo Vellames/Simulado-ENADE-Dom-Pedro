@@ -2,6 +2,8 @@ import {Courses} from "../../models/courses"
 
 Router.route("/courses", function(){
     this.subscribe("courses.select");
+    this.subscribe("questions.select");
+    this.subscribe("users.select");
     this.render("courses_view", {
         data: () => {
             return {

@@ -1,3 +1,5 @@
+import {Questions} from "./questions";
+
 var Courses = new Mongo.Collection("courses");
 
 /**
@@ -44,6 +46,19 @@ Courses.edit = (_id, name, callback) => {
  * @param callback Callback of function
  */
 Courses.delete = (_id, callback) => {
+
+    // Check questions relationships
+    const relationshipsQuestions = Questions.select({"course._id" : _id}).count();
+    if(relationshipsQuestions > 0){
+        throw new Meteor.Error(TAPi18n.__("courses_remove_error_question_relationship"));
+    }
+
+    // Check users relationships
+    const relationshipsUsers = Meteor.users.select({"profile.courses._id": _id}).count();
+    if(relationshipsUsers > 0){
+        throw new Meteor.Error(TAPi18n.__("courses_remove_error_user_relationship"));
+    }
+
     Courses.remove({_id : _id}, (err,res) => callback(err, res));
 };
 

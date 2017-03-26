@@ -41,6 +41,9 @@
   "alert-verify-email-2" : "ainda não foi verificado, para sua segurança ative o email cadastrado",
 
   "courses_view_new_courses": "Novo Curso",
+  "courses_remove_error_question_relationship": "Existe uma ou mais questões atreladas a esse curso. É preciso remove-las antes de apagar o curso",
+  "courses_remove_error_user_relationship": "Existe um ou mais usuários atrelados a esse curso. É preciso remover as referências antes de apagar o curso",
+
   "questions_view_new_question": "Nova Pergunta",
   "questions_form_new_answer": "Nova Resposta",
 

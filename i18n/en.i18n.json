@@ -42,6 +42,9 @@
   "alert-verify-email-2" : "are not verified, for you security, active the email registered",
 
   "courses_view_new_courses": "New Class",
+  "courses_remove_error_question_relationship": "There are one or more questions linked to this course. You must remove them before deleting the course.",
+  "courses_remove_error_user_relationship": "There are one or more users linked to this course. References must be removed before deleting course",
+
   "questions_view_new_question": "New Question",
   "questions_form_new_answer": "New Answer",
 

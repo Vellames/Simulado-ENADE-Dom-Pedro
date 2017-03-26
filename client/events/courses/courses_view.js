@@ -20,13 +20,18 @@ Template.courses_view.events({
         }
 
         const _id = $(event.currentTarget).attr("data-id");
-        Courses.delete(_id, (err) =>{
-            if(err){
-                alert(TAPi18n.__('register_delete_fail'));
-            } else {
-                alert(TAPi18n.__('register_delete_success'));
-                Router.go("/courses");
-            }
-        });
+        try{
+            Courses.delete(_id, (err) =>{
+                if(err){
+                    alert(TAPi18n.__('register_delete_fail'));
+                } else {
+                    alert(TAPi18n.__('register_delete_success'));
+                    Router.go("/courses");
+                }
+            });
+        } catch (ex) {
+            alert(ex.error);
+        }
+
     }
 });
