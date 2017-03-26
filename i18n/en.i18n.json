@@ -35,6 +35,9 @@
   "header_menu_courses": "Courses",
   "header_menu_questions": "Questions",
   "header_menu_users": "Users",
+  "header_menu_system_language": "System Language",
+  "header_menu_system_portuguese": "Portuguese",
+  "header_menu_system_english": "English",
 
   "index_have_not_login?1" : "No account yet?",
   "index_have_not_login?2" : "Click the 'Sign In / Register' button in the upper right corner and wait for an administrator's approval",
@@ -43,7 +46,7 @@
   "alert-verify-email-1" : "The email",
   "alert-verify-email-2" : "are not verified, for you security, active the email registered",
 
-  "courses_view_new_courses": "New Class",
+  "courses_view_new_courses": "New Course",
   "courses_remove_error_question_relationship": "There are one or more questions linked to this course. You must remove them before deleting the course.",
   "courses_remove_error_user_relationship": "There are one or more users linked to this course. References must be removed before deleting course",
 

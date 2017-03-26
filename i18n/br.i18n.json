@@ -35,6 +35,9 @@
   "header_menu_courses": "Cursos",
   "header_menu_questions": "Perguntas",
   "header_menu_users": "Usuários",
+  "header_menu_system_language": "Linguagem do Sistema",
+  "header_menu_system_portuguese": "Português",
+  "header_menu_system_english": "Inglês",
 
   "index_have_not_login?1" : "Ainda não tem login?",
   "index_have_not_login?2" : "Clique no botão 'Entrar/Cadastrar' no canto superior direito e aguarde aprovação de um administrador",
