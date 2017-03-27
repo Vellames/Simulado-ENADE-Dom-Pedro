@@ -13,6 +13,7 @@ Accounts.onCreateUser((options, user) => {
 if(Meteor.isServer){
 
     Meteor.startup(function(){
+        console.log("oi");
 
         // Set Mail URL
         process.env.MAIL_URL='smtp://c.vellames@outlook.com:_cassiano1995@@@smtp-mail.outlook.com:587';
@@ -22,18 +23,24 @@ if(Meteor.isServer){
             sendVerificationEmail: true
         });
 
-        // Configure emails templates
-        Accounts.emailTemplates.from = 'no-reply@dpii.com.br';
-        Accounts.emailTemplates.siteName = 'localhost:3000';
+        Accounts.emailTemplates.siteName = "Simulado ENADE Dom Pedro II";
 
-        // Email verification
-        Accounts.emailTemplates.verifyEmail.subject(function(user){
-            return 'oieeeeee';
-        });
+        // Activation email
+        Accounts.emailTemplates.verifyEmail.subject = function (user) {
+            return TAPi18n.__("verify_email_subject");
+        };
+        Accounts.emailTemplates.verifyEmail.text = function (user, url) {
+            return TAPi18n.__("verify_email_body") + url;
+        };
 
-        Accounts.emailTemplates.verifyEmail.text(function(user, url){
-            return url;
-        });
+        // Resend password email
+        Accounts.emailTemplates.resetPassword.subject = function (user) {
+            return TAPi18n.__("reset_password_email_subject");
+        };
+
+        Accounts.emailTemplates.resetPassword.text = function (user, url) {
+            return TAPi18n.__("reset_password_email_body") + url;
+        };
 
     });
 }

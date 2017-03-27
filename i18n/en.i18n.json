@@ -85,6 +85,10 @@
   "register_delete_fail" : "Failed to delete record",
   "register_delete_confirm" : "Do you really want to delete this record?",
 
+  "verify_email_subject": "Confirmation Email ENADE Simulator - Dom Pedro II",
+  "verify_email_body": "Hi, you completed your registration on ENADE Simulator - Dom Pedro II.\nClick the link below to check your email.\n\n",
+  "reset_password_email_subject": "Password Recovery Email ENADE Simulator - Dom Pedro II",
+  "reset_password_email_body": "Hello, did you forgot your password?\nClick the link below to change your password.\n\n",
 
   "footer_copyright": "Developed by Cassiano Vellames | All rights reserved"
 }

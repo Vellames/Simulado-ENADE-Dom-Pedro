@@ -85,6 +85,11 @@
   "register_delete_fail" : "Falha ao deletar registro",
   "register_delete_confirm" : "Deseja realmente deletar esse registro?",
 
+  "verify_email_subject": "Email de Confirmação do Simulado ENADE - Dom Pedro II",
+  "verify_email_body": "Olá, você acabou de realizar seu cadastro no Simulado ENADE - Dom Pedro II.\nClique no link abaixo para verificar seu email.\n\n",
+  "reset_password_email_subject": "Email de Recuperação de Senha do Simulado ENADE - Dom Pedro II",
+  "reset_password_email_body": "Olá, você esqueceu sua senha?\nClique no link abaixo para alterar sua senha.\n\n",
+
   "footer_copyright": "Desenvolvido por Cassiano Vellames | Todos os direitos reservados"
 }
 
