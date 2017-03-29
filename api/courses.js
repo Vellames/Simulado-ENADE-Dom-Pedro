@@ -6,7 +6,8 @@ if(Meteor.isServer){
         .get(function(){
             const courses = Courses.select({}, {name : 1}).fetch();
             this.response.setHeader('Content-Type','application/json');
-            this.response.end(JSON.stringify({data : courses}));
+            this.response.setHeader('Access-Control-Allow-Origin','*');
+            this.response.end(JSON.stringify(courses));
         });
 
 }

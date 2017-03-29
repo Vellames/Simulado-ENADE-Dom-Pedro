@@ -33,7 +33,8 @@ if(Meteor.isServer){
             }
 
             this.response.setHeader('Content-Type','application/json');
-            this.response.end(JSON.stringify({data : sendQuestions}));
+            this.response.setHeader('Access-Control-Allow-Origin','*');
+            this.response.end(JSON.stringify(sendQuestions));
         });
 
 }
