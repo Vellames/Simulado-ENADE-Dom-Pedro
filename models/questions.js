@@ -4,18 +4,24 @@ var Questions = new Mongo.Collection("questions");
  * Select the questions based in params
  * @param filter Filter json
  * @param orderBy Order By json
+ * @param fields JSON with fields in find
  * @returns {Cursor} Returns a list of Question
  */
-Questions.select = (filter, orderBy) => {
+Questions.select = (filter, orderBy, fields) => {
     if(filter == undefined){
         filter = {};
     }
 
-    if(orderBy == undefined){
-        orderBy = {};
+    var othersParams = {};
+    if(orderBy != undefined){
+        othersParams["sort"] = orderBy
     }
 
-    return Questions.find(filter, {sort: orderBy});
+    if(fields != undefined){
+        othersParams["fields"] = fields
+    }
+
+    return Questions.find(filter, othersParams);
 };
 
 /**

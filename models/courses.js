@@ -65,18 +65,25 @@ Courses.delete = (_id, callback) => {
 /**
  * @param filter JSON with filters
  * @param orderBy JSON with orderBy params
+ * @param fields JSON with fields in find
  * @returns {Cursor} Returns a cursor with courses
  */
-Courses.select = (filter, orderBy) => {
+Courses.select = (filter, orderBy, fields) => {
     if(filter == undefined){
         filter = {};
     }
 
-    if(orderBy == undefined){
-        orderBy = {};
+    var othersParams = {};
+    if(orderBy != undefined){
+        othersParams["sort"] = orderBy
     }
 
-    return Courses.find(filter, {sort: orderBy});
+    if(fields != undefined){
+        othersParams["fields"] = fields
+    }
+
+
+    return Courses.find(filter, othersParams);
 };
 
 /**

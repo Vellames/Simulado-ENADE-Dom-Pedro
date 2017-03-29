@@ -10,7 +10,11 @@ if(Meteor.isServer){
             var limit = this.params.limit;
 
             // Questions of this courses
-            const questions = Questions.select({"course._id" : course}, {name : 1}).fetch();
+            const questions = Questions.select(
+                {"course._id" : course},
+                {},
+                {question : 1, responses: 1},
+            ).fetch();
 
             //Check limit
             if(limit > questions.length){
