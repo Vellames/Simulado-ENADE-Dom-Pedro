@@ -37,6 +37,21 @@ Meteor.users.edit = (_id, courses, callback) => {
     );
 };
 
+Meteor.users.updateCourses = (courseId, name, user, newDate, callback) => {
+    Meteor.users.update(
+        {"profile.courses._id" : courseId},
+        {
+            $set : {
+                "profile.courses.$.name" : name,
+                "profile.courses.$.editedBy" : user,
+                "profile.courses.$.edited" : newDate
+            }
+        },
+        {multi : true},
+        (err,res) => callback(err,res)
+    );
+}
+
 /**
  * Activate an user
  * @param _id Id of user to be activated

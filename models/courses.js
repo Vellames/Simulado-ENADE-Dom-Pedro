@@ -26,17 +26,28 @@ Courses.add = (name, callback) => {
  * @param callback Callback of function
  */
 Courses.edit = (_id, name, callback) => {
+
+    const newDate = new Date();
+
     Courses.update(
         {_id : _id},
         {$set :
             {
                 name: name,
                 editedBy: Meteor.user(),
-                edited: new Date()
+                edited: newDate
             }
         }
     , function(err) {
-        callback(err);
+            if(err){
+                callback(err);
+                return false;
+            }
+
+            Meteor.call("updateEmbedCourses", _id, name, Meteor.user(), newDate, function(err,res){
+                callback(err);
+            });
+
     });
 };
 

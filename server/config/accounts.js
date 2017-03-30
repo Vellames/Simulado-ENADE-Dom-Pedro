@@ -13,7 +13,6 @@ Accounts.onCreateUser((options, user) => {
 if(Meteor.isServer){
 
     Meteor.startup(function(){
-        console.log("oi");
 
         // Set Mail URL
         process.env.MAIL_URL='smtp://c.vellames@outlook.com:_cassiano1995@@@smtp-mail.outlook.com:587';

@@ -85,6 +85,30 @@ Questions.delete = (_id, callback) =>{
     Questions.remove({_id: _id}, (err,res) => callback(err,res));
 };
 
+
+/**
+ * Update courses values
+ * @param courseId Id of course
+ * @param name new name
+ * @param user User informations
+ * @param newDate Actual date
+ * @param callback callback of function
+ */
+Questions.updateCourses = (courseId, name, user, newDate, callback) => {
+    Questions.update(
+        {"course._id" : courseId},
+        {
+            $set : {
+                "course.name" : name,
+                "course.editedBy" : user,
+                "course.edited" : newDate
+            }
+        },
+        {multi : true},
+        (err,res) => callback(err,res)
+    );
+}
+
 Questions.allow({
     insert: (userId, doc) => {
         var user = Meteor.user();
@@ -92,7 +116,6 @@ Questions.allow({
     },
     update: (userId, doc, fields, modifier) => {
         var user = Meteor.user();
-        console.log(doc);
         return (user.profile.isActive && doc.createdBy._id == userId) || user.profile.isAdmin;
     },
     remove: (userId, doc) => {
