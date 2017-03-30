@@ -10,9 +10,13 @@ FormHelper.getFormData = ($form) => {
 
     $.map(unindexed_array, function(n, i){
         if(n["value"] != ""){
-            indexed_array[n['name']] = new RegExp(n['value'], 'i');
-        }
+            try{
+                indexed_array[n['name']] = JSON.parse(n["value"]);
+            } catch(ex) {
+                indexed_array[n['name']] = new RegExp(n['value'], 'i');
+            }
 
+        }
     });
 
     return indexed_array;

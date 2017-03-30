@@ -12,6 +12,7 @@ Meteor.users.select = (filter, orderBy) => {
         orderBy = {}
     }
 
+    console.log(JSON.stringify(filter));
     return Meteor.users.find(filter, {sort: orderBy});
 };
 

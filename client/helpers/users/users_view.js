@@ -5,7 +5,7 @@ Template.users_view.onCreated(function (){
 });
 
 Template.users_view.helpers({
-    courses() {
+    users() {
         return Template.instance().users.get();
     },
 });

@@ -5,8 +5,8 @@ Router.configure({
 
 // Configure routes permissions
 Router.onBeforeAction(function() {
-
-    const actualRouteName = Router.current().route.getName();
+    this.next();
+    /*const actualRouteName = Router.current().route.getName();
 
     // Can only pass in home route
     if(actualRouteName == undefined){
@@ -26,6 +26,6 @@ Router.onBeforeAction(function() {
         this.next();
     } else {
         Router.go("/");
-    }
+    }*/
 
 });

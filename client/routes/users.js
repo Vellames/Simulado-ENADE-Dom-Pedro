@@ -10,7 +10,7 @@ Router.route("/users", function(){
     this.render("users_view", {
         data : () => {
             return {
-                "users" : Meteor.users.select({}, {})
+                users : Meteor.users.select({}, {"profile.name" : 1})
             }
         }
     });

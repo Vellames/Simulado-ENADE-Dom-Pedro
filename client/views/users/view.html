@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <label for="filter_email">{{_ "email"}}</label>
-                    <input type="text" class="form-control" id="filter_email" name="email.address">
+                    <input type="text" class="form-control" id="filter_email" name="emails.address">
                 </div>
                 <div class="col-xs-12 col-sm-6 margin-top-10">
                     <label for="filter_is_active">{{_ "active"}}</label>
@@ -45,10 +45,10 @@
                 <thead>
                 <tr>
                     <th>{{_ "actions"}}</th>
-                    <th><a>{{_ "name"}}</a></th>
-                    <th><a>{{_ "email"}}</a></th>
-                    <th><a>{{_ "active"}}</a></th>
-                    <th><a>{{_ "admin"}}</a></th>
+                    <th data-field="profile.name" data-order-mode="1"><a>{{_ "name"}}</a></th>
+                    <th data-field="emails.address" data-order-mode="-1"><a>{{_ "email"}}</a></th>
+                    <th data-field="profile.isActive" data-order-mode="-1"><a>{{_ "active"}}</a></th>
+                    <th data-field="profile.isAdmin" data-order-mode="-1"><a>{{_ "admin"}}</a></th>
                 </tr>
                 </thead>
                 <tbody>

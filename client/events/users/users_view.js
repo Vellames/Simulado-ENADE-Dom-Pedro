@@ -73,7 +73,6 @@ Template.users_view.events({
     'submit form' : (event, instance) => {
         event.preventDefault();
         const formData = FormHelper.getFormData($(event.currentTarget));
-        console.log(JSON.stringify(formData));
         instance.users.set(Meteor.users.select(formData, Session.get("orderByForm")));
     },
 
