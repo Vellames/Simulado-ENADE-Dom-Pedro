@@ -7,7 +7,7 @@ Router.route("/questions", function(){
     this.render("questions_view", {
         data: () => {
             return {
-                questions: Questions.select({}, {name : 1}),
+                questions: Questions.select({}, {"course.name" : 1, "question" : 1}),
                 courses: Courses.select({}, {name : 1})
             }
         }

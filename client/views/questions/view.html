@@ -5,7 +5,7 @@
                 <legend>{{_ "filter"}} ({{_ "header_menu_questions"}})</legend>
                 <div class="col-xs-12 col-sm-6">
                     <label for="filter_course">{{_ "course"}}</label>
-                    <select class="form-control" id="filter_course">
+                    <select class="form-control" id="filter_course" name="course._id">
                         <option value="">{{_ "(select)"}}</option>
                         {{#each courses}}
                             <option value="{{_id}}">{{name}}</option>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <label for="filter_created_by">{{_ "created_by"}}</label>
-                    <input type="text" class="form-control" id="filter_created_by">
+                    <input type="text" class="form-control" id="filter_created_by" name="createdBy.profile.name">
                 </div>
                 <div class="button-div">
                     <button class="btn btn-primary">
@@ -39,8 +39,8 @@
                 <thead>
                 <tr>
                     <th>{{_ "actions"}}</th>
-                    <th data-field="name" data-order-mode="1"><a>{{_ "question"}}</a></th>
-                    <th data-field="name" data-order-mode="1"><a>{{_ "course"}}</a></th>
+                    <th data-field="question" data-order-mode="1"><a>{{_ "question"}}</a></th>
+                    <th data-field="course.name" data-order-mode="-1"><a>{{_ "course"}}</a></th>
                     <th data-field="createdBy.profile.name" data-order-mode="-1"><a>{{_ "created_by"}}</a></th>
                     <th data-field="editedBy.profile.name" data-order-mode="-1"><a>{{_ "edited_by"}}</a></th>
                 </tr>

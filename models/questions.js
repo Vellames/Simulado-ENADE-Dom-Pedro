@@ -21,6 +21,7 @@ Questions.select = (filter, orderBy, fields) => {
         othersParams["fields"] = fields
     }
 
+    console.log(JSON.stringify(filter));
     return Questions.find(filter, othersParams);
 };
 
