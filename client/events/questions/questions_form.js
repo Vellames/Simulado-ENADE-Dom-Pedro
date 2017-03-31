@@ -5,6 +5,7 @@ Template.questions_form.events({
 
     /**
      * Push a new answer in array of answers
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -21,6 +22,7 @@ Template.questions_form.events({
 
     /**
      * Remove an answer in array of answers
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -35,6 +37,7 @@ Template.questions_form.events({
 
     /**
      * Data bind in text area to put the current value of answer in text area
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -49,6 +52,7 @@ Template.questions_form.events({
 
     /**
      * Data bind in radio button to put the current value of attr "correct" in array
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -70,6 +74,7 @@ Template.questions_form.events({
 
     /**
      * Add a new question in database
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -118,15 +123,13 @@ Template.questions_form.events({
             });
         }
 
-
-
-
         event.preventDefault();
     }
 });
 
 /**
  * @param answers Answers array
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @returns {number} Returns the actual number of corrects answers in question
  */
 const numberOfCorrectsAnswers = (answers) => {

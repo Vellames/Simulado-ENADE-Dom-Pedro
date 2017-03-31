@@ -1,4 +1,9 @@
 a{ cursor: pointer }
+
+h1.page_name{  font-size: 25px;  }
+
+.margin-top-10{ margin-top: 10px;}
+
 .btn{ margin-bottom: 10px; }
 
 .button-div{
@@ -14,8 +19,3 @@ a{ cursor: pointer }
     margin-bottom: 10px;
 }
 
-h1.page_name{
-    font-size: 25px;
-}z
-
-.margin-top-10{ margin-top: 10px;}

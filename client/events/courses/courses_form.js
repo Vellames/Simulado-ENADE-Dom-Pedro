@@ -1,6 +1,13 @@
 import {Courses} from "../../../models/courses"
 
 Template.courses_form.events({
+
+    /**
+     * Insert or update a course
+     * @author Cassiano Vellames <c.vellames@outlook.com>
+     * @param event
+     * @param template
+     */
     "submit form": (event, template) => {
         event.preventDefault();
 

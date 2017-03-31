@@ -1,3 +1,7 @@
+/**
+ * Set all routes of courses
+ */
+
 import {Courses} from "../../models/courses"
 
 Router.route("/courses", function(){

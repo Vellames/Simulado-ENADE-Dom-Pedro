@@ -2,7 +2,6 @@ Router.configure({
     layoutTemplate: "main"
 });
 
-
 // Configure routes permissions
 Router.onBeforeAction(function() {
     this.next();

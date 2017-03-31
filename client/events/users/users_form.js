@@ -1,8 +1,10 @@
 import {FormHelper} from "../../../utils/form_helper"
 
 Template.users_form.events({
+
     /**
      * Add a new course choose in DOM
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -31,6 +33,7 @@ Template.users_form.events({
 
     /**
      * Remove a course choose in DOM
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -49,6 +52,7 @@ Template.users_form.events({
 
     /**
      * Edit the courses of an user
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */

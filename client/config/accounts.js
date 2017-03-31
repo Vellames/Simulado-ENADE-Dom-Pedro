@@ -1,3 +1,7 @@
+/**
+ * Configure the Accounts of application
+ */
+
 Accounts.ui.config({
     requestPermissions: [],
     extraSignupFields: [
@@ -17,4 +21,5 @@ Accounts.ui.config({
         }
     ]
 });
+
 accountsUIBootstrap3.setLanguage('pt-BR');

@@ -1,3 +1,7 @@
+/**
+ * Set all routes of questions
+ */
+
 import {Courses} from "../../models/courses";
 import {Questions} from "../../models/questions";
 

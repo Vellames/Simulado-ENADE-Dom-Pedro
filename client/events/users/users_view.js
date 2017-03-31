@@ -4,6 +4,7 @@ Template.users_view.events({
 
     /**
      * Activate an user
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -21,6 +22,7 @@ Template.users_view.events({
 
     /**
      * Disable an user
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -38,6 +40,7 @@ Template.users_view.events({
 
     /**
      * Grant admin permissions for user
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -55,6 +58,7 @@ Template.users_view.events({
 
     /**
      * Revoke admin permissions for user
+     * @author Cassiano Vellames <c.vellames@outlook.com>
      * @param event
      * @param instance
      */
@@ -70,12 +74,24 @@ Template.users_view.events({
         })
     },
 
+    /**
+     * Apply the filter in select
+     * @author Cassiano Vellames <c.vellames@outlook.com>
+     * @param event
+     * @param instance
+     */
     'submit form' : (event, instance) => {
         event.preventDefault();
         const formData = FormHelper.getFormData($(event.currentTarget));
         instance.users.set(Meteor.users.select(formData, Session.get("orderByForm")));
     },
 
+    /**
+     * Change the sort order
+     * @author Cassiano Vellames <c.vellames@outlook.com>
+     * @param event
+     * @param instance
+     */
     "click table thead th" : (event, instance) => {
         const formData = FormHelper.getFormData($("form.filter-form"));
         FormHelper.setOrderBy(event);

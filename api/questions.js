@@ -2,6 +2,12 @@ import {Questions} from "../models/questions";
 
 if(Meteor.isServer){
 
+    /**
+     * This method return random questions of a course
+     * @param :course Id of course
+     * @param :limit Limit of questions to get
+     * @author Cassiano Vellames <c.vellames@outlook.com>
+     */
     Router.route("/api/questions/:course/:limit", {where : "server"})
         .get(function(){
 
@@ -16,10 +22,14 @@ if(Meteor.isServer){
                 {question : 1, responses: 1},
             ).fetch();
 
-            //Check limit
+            //Check if limit is bigger than the number of questions of the course in database
             if(limit > questions.length){
                 limit = questions.length;
             }
+
+            /*
+                Logic to do the return random questions
+             */
 
             // Add possible indexes array
             var possibleIndexes = [];
@@ -36,8 +46,11 @@ if(Meteor.isServer){
                 possibleIndexes.splice(index, 1);
             }
 
+            // Set JSON return header and enable CORS
             this.response.setHeader('Content-Type','application/json');
             this.response.setHeader('Access-Control-Allow-Origin','*');
+
+            // Send the response
             this.response.end(JSON.stringify(sendQuestions));
         });
 

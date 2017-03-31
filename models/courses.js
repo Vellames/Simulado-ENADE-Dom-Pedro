@@ -1,9 +1,14 @@
+/**
+ * All methods of Courses Model
+ */
+
 import {Questions} from "./questions";
 
 var Courses = new Mongo.Collection("courses");
 
 /**
  * Insert a new course
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param name Name of course
  * @param callback Callback of operation
  */
@@ -21,6 +26,7 @@ Courses.add = (name, callback) => {
 
 /**
  * Edit a course
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param _id Id of course
  * @param name New name of course
  * @param callback Callback of function
@@ -39,12 +45,14 @@ Courses.edit = (_id, name, callback) => {
             }
         }
     , function(err) {
+
             if(err){
                 callback(err);
                 return false;
             }
 
-            Meteor.call("updateEmbedCourses", _id, name, Meteor.user(), newDate, function(err,res){
+            // Delete the embed courses and users
+            Meteor.call("updateEmbedDocuments", _id, name, Meteor.user(), newDate, function(err,res){
                 callback(err);
             });
 
@@ -53,6 +61,7 @@ Courses.edit = (_id, name, callback) => {
 
 /**
  * Delete one course
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param _id Id of course
  * @param callback Callback of function
  */
@@ -74,6 +83,7 @@ Courses.delete = (_id, callback) => {
 };
 
 /**
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param filter JSON with filters
  * @param orderBy JSON with orderBy params
  * @param fields JSON with fields in find

@@ -1,3 +1,7 @@
+/**
+ * Home route
+ */
+
 Router.route("/", function () {
     this.render("home", {
         data: function(){

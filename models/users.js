@@ -1,5 +1,10 @@
 /**
+ * All methods of Courses Questions
+ */
+
+/**
  * Select users
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param filter Filter array
  * @param orderBy OrderBy array
  */
@@ -17,6 +22,7 @@ Meteor.users.select = (filter, orderBy) => {
 
 /**
  * Load one user information
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param _id Id of user
  */
 Meteor.users.loadOne = (_id) => {
@@ -25,6 +31,7 @@ Meteor.users.loadOne = (_id) => {
 
 /**
  * Edit only the courses of a user
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param _id Id of user
  * @param courses New courses array
  * @param callback Callback after execution
@@ -44,6 +51,15 @@ Meteor.users.edit = (_id, courses, callback) => {
     );
 };
 
+/**
+ * Update the embed course in user based in passed id
+ * @author Cassiano Vellames <c.vellames@outlook.com>
+ * @param courseId Id to search
+ * @param name New name
+ * @param user New user
+ * @param newDate New date
+ * @param callback Callback of function
+ */
 Meteor.users.updateCourses = (courseId, name, user, newDate, callback) => {
     Meteor.users.update(
         {"profile.courses._id" : courseId},
@@ -61,6 +77,7 @@ Meteor.users.updateCourses = (courseId, name, user, newDate, callback) => {
 
 /**
  * Activate an user
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param _id Id of user to be activated
  * @param callback Callback after execution
  */
@@ -74,6 +91,7 @@ Meteor.users.activateUser = (_id, callback) => {
 
 /**
  * Disable an user
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param _id Id of user to be disabled
  * @param callback Callback after execution
  */
@@ -94,6 +112,7 @@ Meteor.users.disableUser = (_id, callback) => {
 
 /**
  * Grant admin permissions for an user
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param _id Id of user to be admin
  * @param callback Callback after execution
  */
@@ -107,6 +126,7 @@ Meteor.users.enableAdmin = (_id, callback) => {
 
 /**
  * Revoke admin permissions for an user
+ * @author Cassiano Vellames <c.vellames@outlook.com>
  * @param _id Id of user to be revoked
  * @param callback Callback after execution
  */

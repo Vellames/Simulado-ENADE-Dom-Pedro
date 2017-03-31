@@ -1,10 +1,10 @@
+/**
+ * Set all routes of users
+ */
+
 import {Courses} from "../../models/courses";
 
 Router.route("/users", function(){
-
-   /* if(!Meteor.user().profile.isAdmin){
-        Route.go("/");
-    }*/
 
     this.subscribe("users.select").wait();
     this.render("users_view", {
@@ -14,6 +14,7 @@ Router.route("/users", function(){
             }
         }
     });
+
 });
 
 Router.route("/user/:_id/edit", function(){

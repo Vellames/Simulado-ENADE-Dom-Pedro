@@ -1,3 +1,7 @@
+/**
+ * Configure Accounts in server side
+ */
+
 // Adding some personal informations in user creation
 Accounts.onCreateUser((options, user) => {
 
