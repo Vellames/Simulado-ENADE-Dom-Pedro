@@ -9,9 +9,6 @@ FormHelper.getFormData = ($form) => {
     var indexed_array = {};
 
     $.map(unindexed_array, function(n, i){
-        console.log(n["name"]);
-        console.log(n["value"]);
-        console.log(".")
         if(n["value"] != ""){
             try{
                 indexed_array[n['name']] = JSON.parse(n["value"]);

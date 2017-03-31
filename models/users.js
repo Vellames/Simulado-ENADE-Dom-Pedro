@@ -12,7 +12,6 @@ Meteor.users.select = (filter, orderBy) => {
         orderBy = {}
     }
 
-    console.log(JSON.stringify(filter));
     return Meteor.users.find(filter, {sort: orderBy});
 };
 
@@ -31,6 +30,13 @@ Meteor.users.loadOne = (_id) => {
  * @param callback Callback after execution
  */
 Meteor.users.edit = (_id, courses, callback) => {
+
+    // Cant edit user Admin
+    const user = Meteor.users.find({"_id" : _id}).fetch()[0];
+    if(user.masterUser){
+        return false;
+    }
+
     Meteor.users.update(
         {_id : _id},
         {$set : {"profile.courses": courses}},
@@ -72,6 +78,13 @@ Meteor.users.activateUser = (_id, callback) => {
  * @param callback Callback after execution
  */
 Meteor.users.disableUser = (_id, callback) => {
+
+    // Cant edit user Admin
+    const user = Meteor.users.find({"_id" : _id}).fetch()[0];
+    if(user.masterUser){
+        return false;
+    }
+
     Meteor.users.update(
         {_id : _id},
         {$set : {"profile.isActive": false}},
@@ -98,6 +111,13 @@ Meteor.users.enableAdmin = (_id, callback) => {
  * @param callback Callback after execution
  */
 Meteor.users.disableAdmin = (_id, callback) => {
+
+    // Cant edit user Admin
+    const user = Meteor.users.find({"_id" : _id}).fetch()[0];
+    if(user.masterUser){
+        return false;
+    }
+
     Meteor.users.update(
         {_id : _id},
         {$set : {"profile.isAdmin": false}},

@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "Simulado ENADE Dom Pedro II",
   "private": true,
   "scripts": {
     "start": "meteor run"
