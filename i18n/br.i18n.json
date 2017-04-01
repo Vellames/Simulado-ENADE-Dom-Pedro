@@ -1,0 +1,96 @@
+{
+
+  "hi" : "Olá",
+  "attention": "Atenção",
+  "filter" : "Filtrar",
+  "yes" : "Sim",
+  "not" : "Não",
+  "save" : "Salvar",
+  "add" : "Adicionar",
+  "(select)": "(Selecione)",
+  "verified" : "Verificado",
+  "remove" : "Remover",
+
+  "actions" : "Ações",
+  "name" : "Nome",
+  "email": "Email",
+  "active" : "Ativo",
+  "admin" : "Admin",
+  "question" : "Pergunta",
+  "answers" : "Respostas",
+  "correct" : "Correta",
+  "created_by": "Criado Por",
+  "edited_by": "Editado Por",
+
+  "hint_see": "Ver",
+  "hint_edit": "Editar",
+  "hint_delete": "Apagar",
+  "hint_activate": "Ativar Usuário",
+  "hint_inactivate" : "Desativar Usuário",
+  "hint_adm_on" : "Tornar Administrador",
+  "hint_adm_off": "Remover Administrador",
+
+  "course": "Curso",
+
+  "header_menu_courses": "Cursos",
+  "header_menu_questions": "Perguntas",
+  "header_menu_users": "Usuários",
+  "header_menu_system_language": "Linguagem do Sistema",
+  "header_menu_system_portuguese": "Português",
+  "header_menu_system_english": "Inglês",
+
+  "index_have_not_login?1" : "Ainda não tem login?",
+  "index_have_not_login?2" : "Clique no botão 'Entrar/Cadastrar' no canto superior direito e aguarde aprovação de um administrador",
+
+  "alert-account-inactive-msg" : "Sua conta esta inativa. Isso significa que você não poderá criar perguntas até algum administrador ativar sua conta.",
+  "alert-verify-email-1" : "O endereço de email",
+  "alert-verify-email-2" : "ainda não foi verificado, para sua segurança ative o email cadastrado",
+
+  "courses_view_new_courses": "Novo Curso",
+  "courses_remove_error_question_relationship": "Existe uma ou mais questões atreladas a esse curso. É preciso remove-las antes de apagar o curso",
+  "courses_remove_error_user_relationship": "Existe um ou mais usuários atrelados a esse curso. É preciso remover as referências antes de apagar o curso",
+
+  "questions_view_new_question": "Nova Pergunta",
+  "questions_form_new_answer": "Nova Resposta",
+
+  "questions_basic_information" : "Informações Básicas",
+  "questions_alert_minimal_answer" : "Você precisa adicionar pelo menos duas respostas para cada pergunta",
+  "questions_alert_only_one_correct_answer" : "Só é possível adicionar uma resposta correta por pergunta",
+  "questions_alert_zero_correct_answer" : "Nenhuma resposta foi sinalizada como correta, por favor marque a resposta verdadeira",
+
+  "users_basic_data" : "Dados Básicos",
+  "users_emails" : "Emails",
+
+  "user_activate_success" : "Usuário ativado com sucesso",
+  "user_activate_fail" : "Falha ao ativar usuário",
+
+  "user_disable_success" : "Usuário desativado com sucesso",
+  "user_disable_fail" : "Falha ao desativar usuário",
+
+  "user_course_already_pushed" : "O curso escolhido já foi atribuido ao usuário",
+
+  "admin_enable_success" : "Permissão de administrador concedida com sucesso",
+  "admin_enable_fail" : "Falha ao conceder permissão de administrador para o usuário",
+
+  "admin_disable_success" : "Permissão de administrador revogada com sucesso",
+  "admin_disable_fail" : "Falha ao revogar permissãp de administrador para o usuário",
+
+  "register_insert_success" : "Registro inserido com sucesso",
+  "register_insert_fail" : "Falha ao inserir registro",
+
+  "register_update_success" : "Registro atualizado com sucesso",
+  "register_update_fail" : "Falha ao atualizar registro",
+
+  "register_delete_success" : "Registro deletado com sucesso",
+  "register_delete_fail" : "Falha ao deletar registro",
+  "register_delete_confirm" : "Deseja realmente deletar esse registro?",
+
+  "verify_email_subject": "Email de Confirmação do Simulado ENADE - Dom Pedro II",
+  "verify_email_body": "Olá, você acabou de realizar seu cadastro no Simulado ENADE - Dom Pedro II.\nClique no link abaixo para verificar seu email.\n\n",
+  "reset_password_email_subject": "Email de Recuperação de Senha do Simulado ENADE - Dom Pedro II",
+  "reset_password_email_body": "Olá, você esqueceu sua senha?\nClique no link abaixo para alterar sua senha.\n\n",
+
+  "footer_copyright": "Desenvolvido por Cassiano Vellames | Todos os direitos reservados"
+}
+
+
