@@ -1,8 +1,0 @@
-sudo: required
-language: node_js
-node_js:
-  - "4.2.6"
-install:
-  - curl https://install.meteor.com | /bin/sh
-script:
-  - meteor test --once --driver-package dispatch:mocha
