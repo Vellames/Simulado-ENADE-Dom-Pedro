@@ -25,3 +25,5 @@ ian:accounts-ui-bootstrap-3
 tap:i18n
 mrt:bootstrap-3
 nimble:restivus
+practicalmeteor:mocha
+dispatch:mocha
