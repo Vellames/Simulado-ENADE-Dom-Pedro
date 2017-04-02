@@ -5,6 +5,5 @@ node_js:
 install:
   - curl https://install.meteor.com | /bin/sh
 script:
-  - meteor npm install --save bcrypt
   - meteor npm install --save babel-runtime
   - meteor test --once --driver-package dispatch:mocha
