@@ -1,0 +1,94 @@
+<template name="questions_form">
+    <form>
+        <fieldset>
+            <legend>{{_ "questions_basic_information"}}</legend>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="question">{{_ "question"}}</label>
+                    <textarea class="form-control" rows="8" id="question" required {{ternary viewMode "disabled" ""}}>{{question.question}}</textarea>
+                </div>
+            </div>
+
+            <div class="row margin-top-10">
+                <div class="col-xs-12">
+                    <label for="course">{{_ "course"}}</label>
+                    <select class="form-control" id="course" required {{ternary viewMode "disabled" ""}}>
+                        <option value="">{{_ "(select)"}}</option>
+                        {{#each courses}}
+                            <option value="{{_id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+
+            <div class="row margin-top-10">
+                <div class="col-xs-12">
+                    <label for="created_by">{{_ "created_by"}}</label>
+                    <input type="text" class="form-control" disabled value="{{question.createdBy.profile.name}}" id="created_by">
+                </div>
+            </div>
+
+            <div class="row margin-top-10">
+                <div class="col-xs-12">
+                    <label for="edited_by">{{_ "edited_by"}}</label>
+                    <input type="text" class="form-control" disabled value="{{question.editedBy.profile.name}}" id="edited_by">
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="clearfix"></div>
+
+        <fieldset class="margin-top-10">
+            <legend>{{_ "answers"}}</legend>
+            {{#unless viewMode}}
+                <div class="row">
+                    <div class="col-xs-11">
+                        <button class="btn btn-success" id="new-answers">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            {{_ "questions_form_new_answer"}}
+                        </button>
+                    </div>
+                </div>
+            {{/unless}}
+
+            <div id="answers">
+                {{#each answers}}
+                    <div class="row margin-top-10 answer" data-index="{{@index}}">
+                        <div class="col-xs-10">
+                            <textarea class="form-control" rows="4" required {{ternary ../viewMode "disabled" ""}}>{{answer}}</textarea>
+                        </div>
+                        <div class="col-xs-2">
+                            <div>
+                                <label>{{_ "correct"}}: &nbsp;&nbsp;</label><br>
+                                <label><input type="radio" name="correct-{{@index}}" value="true" {{ternary correct "checked" ""}} {{ternary ../viewMode "disabled" ""}}>{{_ "yes"}}</label>
+                                <label><input type="radio" name="correct-{{@index}}" value="false" {{ternary correct "" "checked"}} {{ternary ../viewMode "disabled" ""}}>{{_ "not"}}</label>
+                            </div>
+                            {{#unless ../viewMode}}
+                                <div>
+                                    <button class="btn btn-danger btn-delete" title="{{_ "hint_delete"}}" data-action="remove-answer" data-id="{{_id}}">
+                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        {{_ "remove"}}
+                                    </button>
+                                </div>
+                            {{/unless}}
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </fieldset>
+
+        <div class="clearfix"></div>
+        <hr>
+        {{#unless viewMode}}
+            <div class="row margin-top-10">
+                <div class="col-xs-12">
+                    <button class="btn btn-success">
+                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                        {{_ "save"}}
+                    </button>
+                </div>
+            </div>
+        {{/unless}}
+
+    </form>
+</template>
